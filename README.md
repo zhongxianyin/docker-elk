@@ -28,7 +28,7 @@
      * [SELinux](#selinux)
      * [Docker for Windows](#docker-for-windows)
 2. [用法](#用法)
-     * [Bringing up the stack](#Bringing up the stack)
+     * [构建stack](#构建stack)
      * [初始设置](#initial-setup)
 3. [配置](＃配置)
      * [我如何调整Kibana配置？](#how-can-i-tune-the-kibana-configuration)
@@ -72,7 +72,7 @@ $ chcon -R system_u:object_r:admin_home_t:s0 docker-elk/
 
 ## 用法
 
-### Bringing up the stack
+### 构建stack
 
 **注意**:如果您切换分支或更新基本映像 - 您可能需要先运行`docker-compose build`
 
