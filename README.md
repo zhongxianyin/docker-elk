@@ -1,8 +1,8 @@
 # Elastic stack (ELK) on Docker
 
 [![Join the chat at https://gitter.im/deviantony/docker-elk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/deviantony/docker-elk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Elastic Stack version](https://img.shields.io/badge/ELK-6.7.0-blue.svg?style=flat)](https://github.com/deviantony/docker-elk/issues/376)
-[![Build Status](https://api.travis-ci.org/deviantony/docker-elk.svg?branch=master)](https://travis-ci.org/deviantony/docker-elk)
+[![Elastic Stack 版本](https://img.shields.io/badge/ELK-6.7.0-blue.svg?style=flat)](https://github.com/deviantony/docker-elk/issues/376)
+[![构建状态](https://api.travis-ci.org/deviantony/docker-elk.svg?branch=master)](https://travis-ci.org/deviantony/docker-elk)
 
 使用Docker和Docker Compose运行最新版本的[Elastic stack](https://www.elastic.co/elk-stack)。
 
@@ -28,7 +28,7 @@
      * [SELinux](#selinux)
      * [Docker for Windows](#docker-for-windows)
 2. [用法](#用法)
-     * [筹集堆栈](#筹备堆栈)
+     * [Bringing up the stack](#Bringing up the stack)
      * [初始设置](#initial-setup)
 3. [配置](＃配置)
      * [我如何调整Kibana配置？](#how-can-i-tune-the-kibana-configuration)
@@ -72,11 +72,11 @@ $ chcon -R system_u:object_r:admin_home_t:s0 docker-elk/
 
 ## 用法
 
-### 带来堆栈
+### Bringing up the stack
 
 **注意**:如果您切换分支或更新基本映像 - 您可能需要先运行`docker-compose build`
 
-使用`docker-compose`启动堆栈:
+使用`docker-compose`启动docker:
 
 ```console
 $ docker-compose up
@@ -85,7 +85,7 @@ $ docker-compose up
 您还可以通过在上面的命令中添加`-d`标志来在后台运行所有服务(分离模式)。
 
 给Kibana初始化几秒钟，然后通过点击访问Kibana Web UI
-[http://localhost:5601](http:// localhost:5601)，带有Web浏览器。
+[http://localhost:5601](http://localhost:5601) ，带有Web浏览器。
 
 默认情况下，堆栈公开以下端口:
 * 5000:Logstash TCP输入。
@@ -191,7 +191,7 @@ elasticsearch:
 **注意:**注意这些特定于操作系统的注意事项:
 * ** Linux:** [非特权`elasticsearch`用户] [esuser]在Elasticsearch图像中使用，因此
    安装的数据目录必须由uid`1000`拥有。
-* ** macOS:**默认的Docker for Mac配置允许从`/ Users /`，`/ Volumes /`，`/ private /`安装文件，
+* ** macOS:**默认的Docker for Mac配置允许从`/Users/`，`/Volumes/`，`/private/`安装文件，
    和`/ tmp`独家。 按照[文档] [macmounts]中的说明添加更多位置。
 
 [esuser]:https://github.com/elastic/elasticsearch-docker/blob/016bcc9db1dd97ecd0ff60c1290e7fa9142f8ddd/templates/Dockerfile.j2#L22
@@ -218,7 +218,7 @@ elasticsearch:
 
 ###如何指定服务使用的内存量？
 
-默认情况下，Elasticsearch和Logstash都以[总主机的1/4]开头
+默认情况下，Elasticsearch和Logstash都以[总主机的1/4开头
 内存](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/parallel.html#default_heap_size)分配给
 JVM堆大小。
 
