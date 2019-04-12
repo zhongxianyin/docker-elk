@@ -24,21 +24,31 @@
 ## 内容
 
 1. [要求](#要求)
+
    * [主机设置](#主机设置)
    * [SELinux](#selinux)
    * [Docker for Windows](#docker-for-windows)
+   
 2. [用法](#用法)
+
    * [筹集堆栈](#筹备堆栈)
    * [初始设置](#initial-setup)
+   
 3. [配置](＃配置)
+
    * [我如何调整Kibana配置？](#how-can-i-tune-the-kibana-configuration)
    * [如何调整Logstash配置？](#how-can-i-tune-the-logstash-configuration)
    * [我如何调整Elasticsearch配置？](#how-can-i-tune-the-elasticsearch-configuration)
    * [如何扩展Elasticsearch集群？](#how-can-i-scale-the-elasticsearch-cluster)
+   
 4. [存储](#存储)
+
    * [如何保存Elasticsearch数据？](#how-can-i-persist-elasticsearch-data)
+   
 5. [可扩展性](#extensibility)
+
    * [如何添加插件？](#how-can-i-add-plugins)
+   
    * [如何启用提供的扩展？](#how-can-i-enable-the-provided-extensions)
 6. [JVM调整](#jvm-tuning)
    * [如何指定服务使用的内存量？](#how-can-i-specified-of-memory-of-of-a-service)
