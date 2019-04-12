@@ -23,10 +23,10 @@
 
 ## 内容
 
-1. [要求]（#要求）
-   * [主机设置]（#主机设置）
-   * [SELinux]（#selinux）
-   * [Docker for Windows]（#docker-for-windows）
+1. [要求](#要求)
+   * [主机设置](#主机设置)
+   * [SELinux](#selinux)
+   * [Docker for Windows](#docker-for-windows)
 2. [用法]（#用法）
    * [筹集堆栈]（#筹备堆栈）
    * [初始设置]（#initial-setup）
