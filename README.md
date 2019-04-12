@@ -43,8 +43,8 @@
 6. [JVM调整](#jvm-tuning)
      * [如何指定服务使用的内存量？](#how-can-i-specified-of-memory-of-of-a-service)
      * [如何启用与服务的远程JMX连接？](#how-can-i-enable-a-remote-jmx-connection-a-service)
-7. [更进一步](#going-further)
-     * [使用较新的堆栈版本](#using-a-newer-stack-version)
+7. [更新版本](#going-further)
+     * [使用较新的堆栈版本](#更新Elastic Stack版本)
      * [插件和集成](#plugins-and-integraterations)
      * [Docker Swarm](#docker-swarm)
 
@@ -259,9 +259,9 @@ logstash:
     LS_JAVA_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=18080 -Dcom.sun.management.jmxremote.rmi.port=18080 -Djava.rmi.server.hostname=DOCKER_HOST_IP -Dcom.sun.management.jmxremote.local.only=false"
 ```
 
-## 走得更远
+## 更新版本
 
-### 使用更新的堆栈版本
+### 更新Elastic Stack版本
 
 要使用与存储库中当前可用的Elastic Stack版本不同的Elastic Stack版本，只需更改版本即可
 `.env`文件中的数字，并使用以下代码重建堆栈:
